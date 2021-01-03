@@ -3,31 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.example.com/</loc>
+    <loc>https://Kyumin-Park.github.io/categories/</loc>
   </url>
   
   <url>
-    <loc>https://www.example.com/bento-hugo-theme/</loc>
+    <loc>https://Kyumin-Park.github.io/</loc>
   </url>
   
   <url>
-    <loc>https://www.example.com/categories/</loc>
+    <loc>https://Kyumin-Park.github.io/tags/</loc>
   </url>
   
   <url>
-    <loc>https://www.example.com/tags/</loc>
+    <loc>https://Kyumin-Park.github.io/true/</loc>
   </url>
   
   <url>
-    <loc>https://www.example.com/true/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.example.com/ua-xxxxxx-yy/</loc>
-  </url>
-  
-  <url>
-    <loc>https://www.example.com/vs/</loc>
+    <loc>https://Kyumin-Park.github.io/vs/</loc>
   </url>
   
 </urlset>
