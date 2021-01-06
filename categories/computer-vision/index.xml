@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notespace</title>
-    <link>https://kyumin-park.github.io/</link>
-    <description>Recent content on Notespace</description>
+    <title>Computer Vision on Notespace</title>
+    <link>https://kyumin-park.github.io/categories/computer-vision/</link>
+    <description>Recent content in Computer Vision on Notespace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 04 Jan 2021 01:34:08 +0900</lastBuildDate><atom:link href="https://kyumin-park.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Jan 2021 01:34:05 +0900</lastBuildDate><atom:link href="https://kyumin-park.github.io/categories/computer-vision/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Character Region Awareness for Text Detection</title>
       <link>https://kyumin-park.github.io/paper/vision/1904.01941/</link>
