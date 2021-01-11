@@ -3,27 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://kyumin-park.github.io/paper/vision/</loc>
-    <lastmod>2021-01-04T01:34:08+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kyumin-park.github.io/</loc>
-    <lastmod>2021-01-04T01:34:08+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://kyumin-park.github.io/categories/</loc>
     <lastmod>2021-01-04T01:34:05+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://kyumin-park.github.io/paper/vision/1904.01941/</loc>
+    <loc>https://kyumin-park.github.io/paper/1904.01941/</loc>
     <lastmod>2021-01-04T01:34:05+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://kyumin-park.github.io/categories/computer-vision/</loc>
+    <lastmod>2021-01-04T01:34:05+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kyumin-park.github.io/</loc>
     <lastmod>2021-01-04T01:34:05+09:00</lastmod>
   </url>
   
@@ -45,11 +40,6 @@
   <url>
     <loc>https://kyumin-park.github.io/paper/</loc>
     <lastmod>2021-01-04T01:34:01+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://kyumin-park.github.io/paper/nlp/</loc>
-    <lastmod>2021-01-04T01:33:55+09:00</lastmod>
   </url>
   
 </urlset>

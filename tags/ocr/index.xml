@@ -8,10 +8,10 @@
     <lastBuildDate>Mon, 04 Jan 2021 01:34:05 +0900</lastBuildDate><atom:link href="https://kyumin-park.github.io/tags/ocr/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Character Region Awareness for Text Detection</title>
-      <link>https://kyumin-park.github.io/paper/vision/1904.01941/</link>
+      <link>https://kyumin-park.github.io/paper/1904.01941/</link>
       <pubDate>Mon, 04 Jan 2021 01:34:05 +0900</pubDate>
       
-      <guid>https://kyumin-park.github.io/paper/vision/1904.01941/</guid>
+      <guid>https://kyumin-park.github.io/paper/1904.01941/</guid>
       <description>OCR OCR은 많은 경우 Text Detection과 Text Recognition의 두 부분으로 나눌 수 있다. 두 task의 목적을 간단히 정리하면, &amp;lsquo;텍스</description>
     </item>
     
