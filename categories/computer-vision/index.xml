@@ -5,7 +5,16 @@
     <link>https://kyumin-park.github.io/categories/computer-vision/</link>
     <description>Recent content in Computer Vision on Notespace</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 04 Jan 2021 01:34:05 +0900</lastBuildDate><atom:link href="https://kyumin-park.github.io/categories/computer-vision/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Jan 2021 03:41:19 +0900</lastBuildDate><atom:link href="https://kyumin-park.github.io/categories/computer-vision/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Toward fast and accurate human pose estimation via soft-gated skip connections</title>
+      <link>https://kyumin-park.github.io/paper/2002.11098/</link>
+      <pubDate>Wed, 06 Jan 2021 03:41:19 +0900</pubDate>
+      
+      <guid>https://kyumin-park.github.io/paper/2002.11098/</guid>
+      <description>Intro. 딥러닝을 소개하는 영상을 보다보면 꽤 많은 경우에서 걸어다니는 막대기를 볼 수 있을 것이다. 바로 그 막대기를 만드는 작업이 Pose estimation이 되겠다. Pose</description>
+    </item>
+    
     <item>
       <title>Character Region Awareness for Text Detection</title>
       <link>https://kyumin-park.github.io/paper/1904.01941/</link>

@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Transferable Multi-Domain State Generator for Task-Oriented Dialogue Systems // Notespace</title>
+    <link rel="shortcut icon" href="/images/default/cat.jpg" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Kyumin Park" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://kyumin-park.github.io/css/main.min.11035e2a4fa928eb3cf3a1d797eaac7a8e0315b79d38bb9644a50b22e0ac3c30.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Transferable Multi-Domain State Generator for Task-Oriented Dialogue Systems"/>
+<meta name="twitter:description" content="Dialogue State Tracking Dialogue State Tracking의 목적은 유저-시스템 사이의 대화로부터 유저의 목적 또는 의도를 정해진 형태 (보통 (slot, value) 형태)로 뽑아내는 것이다. 유저의 의도가 정"/>
+
+    <meta property="og:title" content="Transferable Multi-Domain State Generator for Task-Oriented Dialogue Systems" />
+<meta property="og:description" content="Dialogue State Tracking Dialogue State Tracking의 목적은 유저-시스템 사이의 대화로부터 유저의 목적 또는 의도를 정해진 형태 (보통 (slot, value) 형태)로 뽑아내는 것이다. 유저의 의도가 정" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://kyumin-park.github.io/paper/1905.08743/" />
+<meta property="article:published_time" content="2021-01-10T23:58:38+09:00" />
+<meta property="article:modified_time" content="2021-01-10T23:58:38+09:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://kyumin-park.github.io"><img class="app-header-avatar" src="/images/default/cat.jpg" alt="Kyumin Park" /></a>
+      <h3>Kyumin Park</h3>
+      <p>M.S. Student in DEAL@KAIST</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/Kyumin-Park" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://www.linkedin.com/in/kyumin-park-6b2431195/" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-linkedin">
+  <title>linkedin</title>
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
+</svg></a>
+        
+          <a target="_blank" href="pkm9403@gmail.com" rel="noreferrer noopener"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-mail">
+  <title>mail</title>
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline>
+</svg></a>
+        
+      </div>
+      <nav class="app-header-menu">
+        <ul class="menu-items">
+          <li><a class="app-header-menu-item" href="/">Home</a></li>
+          <li><a class="app-header-menu-item" href="/paper">Papers</a></li>
+          <li><a class="app-header-menu-item" href="/categories/">Categories</a></li>
+        </ul>
+      </nav>
+
+
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Transferable Multi-Domain State Generator for Task-Oriented Dialogue Systems</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 10, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          5 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line>
+</svg>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="dialogue-state-tracking">Dialogue State Tracking</h1>
+<p>Dialogue State Tracking의 목적은 유저-시스템 사이의 대화로부터 유저의 목적 또는 의도를 정해진 형태 (보통 (slot, value) 형태)로 뽑아내는 것이다.
+유저의 의도가 정해진 포맷으로 정리가 되어야 응답 시스템이 할 행동이 정해지기 때문에, 올바른 State Tracking이 응답 챗봇 시스템에서 중요하다.</p>
+<p>이전 DST 모델들의 전반적인 문제는 slot과 각 slot에서 가능한 value의 풀이 어느정도 정해져 있었다는 것이다.
+예를 들면, 가격 slot에 들어갈 value는 (cheap, normal, expensive)와 같이 세 종류로 딱 정해지고, 모델은 slot의 값을 이 안에서 찾아내는 것이다.
+이렇게 되면 DST 문제는 여러 겹의 classification 문제로 바뀔 수 있다 (Slot별로 classification하면 되기 때문에).
+그런데, 위와 같은 방식으로 문제 풀게 되면 다음과 같은 문제가 발생한다고 저자들은 주장한다.</p>
+<ol>
+<li>모든 slot과 value값을 미리 알기가 힘들다.</li>
+<li>미리 다 알더라도, 이름과 같이 value값이 너무 많아지게 될 수 있다.</li>
+</ol>
+<p>이러한 기존의 문제를 해결하고, 더불어 MultiWOZ[2] 로 대표되는 multi-domain problem이 제시되는 상황에서 shared slot 등의 문제를 해결하기 위해 저자들은 TRADE라 하는 새로운 모델을 제시했다.
+덧붙여, 이 모델이 일반적인 training 외에 Zero-shot과 few-shot learning에서도 기존보다 더 나은 성능을 보였음을 보였다.</p>
+<h1 id="trade-model">TRADE Model</h1>
+<div style="text-align: center;">
+<figure >
+    
+        <img src="/images/paper/trade/trade_1.png" />
+    
+    <figcaption><small><i>TRADE 모델 구조</i></small></figcaption>
+</figure>
+</div>
+<p>TRADE 모델은 크게 세 가지 모듈 (utterance encoder, context-enhanced slot gate, state generator) 로 이루어져 있다.
+각 모듈은 각각 utterance를 vector로 변환하는 역할, slot value가 정해졌다 할지 (대화 속에서 나타났는지) 판단하는 역할, 그리고 각 slot의 value를 생성하는 역할로 나뉜다.</p>
+<h3 id="utterance-encoder">Utterance Encoder</h3>
+<p>Utterance Encoder는 dialogue를 hidden space로 encoding하는 모듈로,
+dialogue history
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+
+
+
+<span >
+  \(
+   
+X_{t}=[U_{t-l}, R_{t-l}, \dots , U_{t}, R_{t}] \in \mathbb{R}^{|X_{t}| \times d_{emb}}
+  \)
+</span>
+
+를
+
+
+<span >
+  \(
+   
+H_{t} \in \mathbb{R}^{|X_{t}| \times d_{hdd}}
+  \)
+</span>
+
+로 변환시켜주는 역할을 한다.
+utterance encoder로는 어떤 sequence encoder(vanilla RNN, LSTM, BERT, &hellip;)를 써도 된다고 하며, 이 논문에서는 bi-GRU[3]를 사용했다.
+또한, 단순히 하나가 아닌 여러 턴을 통해 slot value가 예측될 수 있기 때문에 (multi-turn mapping problem), 각 턴마다 하나의 utterance가 아닌 l개의 utterance history를 사용했다.
+이 때 utterance history는 단순히 여러 utterance를 concat하는 방법으로 연결해서 사용했다.</p>
+<h3 id="state-generator">State Generator</h3>
+<p>Encoding 된 utterance를 가지고 다음으로 할 일은 각 slot에 맞는 value를 찾아 넣는 일이다.
+일반적으로 텍스트로부터 특정 단어나 구문을 찾는 이러한 과정에 사용되는 것이 copy mechanism인데, 그 방법으로는 크게 세 가지 방법이 있다.</p>
+<ol>
+<li>Index-based copy (문장 안에서 필요한 단어를 선택)</li>
+<li>Hard-gated copy (1. vs. value vocabulary 중에서 단어를 선택)</li>
+<li>Soft-gated copy (1.의 확률 분포와 vocabulary의 확률 분포를 합쳐서 가장 유력한 단어를 선택)</li>
+</ol>
+<p>1.은 DST에서 쓰이기엔 value값이 직접적으로 utterance에서 언급되지 않았을 수 있기 때문에 쓰이지 못하고,
+2.는 일반적으로 추가적인 지도학습 등이 필요하다. 따라서 이 논문에선 3.의 방법을 선택해서 value값을 만들어 내었다.</p>
+<p>State generator는 dialogue history로부터 모든 (domain, slot)에 해당하는 value를 각각 생성해낸다.
+Value 생성을 위해서 우선 GRU decoder로 일종의 attention weight 역할을 하는 hidden state
+
+
+<span >
+  \(
+   
+h_{jk}^{dec}
+  \)
+</span>
+
+를 계산한다 (j: domain-slot pair index, k: decoding step).
+계산한 hidden state를 두 방향으로 사용하는데, 첫번째는 vocabulary 내에서 찾아내기 위해, 두번쨰는 dialogue history 내에서 찾기 위해 사용한다.
+이러한 각각의 단어별 확률 계산을 아래처럼 표현할 수 있다.
+
+
+<span  class="align-center">
+  \[
+   
+P_{jk}^{vocab}=Softmax(E \cdot (h_{jk}^{dec})^{T}) \in \mathbb{R}^{|V|}, \\
+P_{jk}^{history}=Softmax(H_{t} \cdot (h_{jk}^{dec})^{T}) \in \mathbb{R}^{|X_{t}|}
+\tag{1}
+  \]
+</span>
+</p>
+<p>두 확률 분포를 더한 최종 확률 분포는 다음과 같이 두 분포의 weighted sum으로 계산할 수 있고,
+두 분포를 더하는 weight 역시 trainable하게 구할 수 있다.
+
+
+<span  class="align-center">
+  \[
+   
+P_{jk}^{final}=p_{jk}^{gen} \times P_{jk}^{vocab} &#43; (1 - p_{jk}^{gen}) \times P_{jk}^{history} \in \mathbb{R}^{|V|} \\
+\\
+p_{jk}^{gen} = Sigmoid(W_{1} \cdot [h_{jk}^{dec};w_{jk};c_{jk}]) \in \mathbb{R}^{1} \\
+c_{jk} = P_{jk}^{history} \cdot H_{t} \in \mathbb{R}^{d_{hdd}}
+\tag{2}
+  \]
+</span>
+</p>
+<h3 id="context-enhanced-slot-gate">Context-enhanced Slot Gate</h3>
+<p>State generator를 통해 각 domain-slot에 대해 value값을 구했지만,
+어떤 domain-slot의 경우 대화에서 아직 (또는 계속) 나타나지 않았거나 특정한 값이 아닌 <em>상관없다</em> 라는 값이 들어갈 수도 있다.
+각 domain-slot이 이 경우인지를 판단하기 위해 도입된 것이 이 slot gate이다.
+작동 방식은 (<em>ptr(원래 찾은 value)</em>, <em>don&rsquo;t care</em>, <em>none</em>) 중에서 slot gate의 출력이 가장 높은 쪽을 따르게 하는 것으로,
+예를 들면 slot gate 결과가 (<em>ptr</em>: 0.2, <em>don&rsquo;t care</em>: 0.7, <em>none</em>: 0.1)이 되면 state generator를 통해 구한 value가 아닌 _don&rsquo;t care_를 value로 가지게 된다.</p>
+<p>Slot Gate는 class 개수가 3개 (<em>ptr(원래 찾은 value)</em>, <em>don&rsquo;t care</em>, <em>none</em>)인 classifier로 정의할 수 있다.
+기존 대화 내용에 해당 domain-slot이 있었는지를 보는 것이기 때문에, dialogue history를 input으로 받아 classify하게 된다.
+따라서, slot gate를 구하는 식은 아래와 같이 나타난다.
+
+
+<span  class="align-center">
+  \[
+   
+G_{j}=Softmax(W_{g} \cdot (c_{j0})^{T}) \in \mathbb{R}^{3}
+\tag{3}
+  \]
+</span>
+</p>
+<p>
+
+<span >
+  \(
+   
+c_{j0}
+  \)
+</span>
+
+는 (2)에서와 같은 것을 사용한다.</p>
+<h3 id="loss-function">Loss Function</h3>
+<p>이 모델에서는 slot gate와 state generator 양쪽을 한번에 학습한다.
+따라서, 아래와 같이 slot gate의 정확도와 state generator의 정확도를 모두 계산해 더하는 방식으로 loss function을 정의했다.
+
+
+<span  class="align-center">
+  \[
+   
+L_{g} = \sum_{j=1}^{J} - log(G_{j} \cdot (y_{j}^{gate})^{T}) \\
+L_{v} = \sum_{j=1}^{J} \sum_{k=1}^{|Y_{j}|} -log(P_{jk}^{final} \cdot (y_{jk}^{value})^{T}) \\
+L = \alpha L_{g} &#43; \beta L_{v}
+\tag{4}
+  \]
+</span>
+</p>
+<h1 id="references">References</h1>
+<p>[1] <a href="https://arxiv.org/pdf/1905.08743.pdf">Transferable Multi-Domain State Generator for Task-Oriented Dialogue Systems</a><br>
+[2] <a href="https://arxiv.org/pdf/1810.00278.pdf">MultiWOZ - A Large-Scale Multi-Domain Wizard-of-Oz Dataset for Task-Oriented Dialogue Modelling</a></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on Notespace</title>
+    <link>https://kyumin-park.github.io/categories/nlp/</link>
+    <description>Recent content in NLP on Notespace</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 10 Jan 2021 23:58:38 +0900</lastBuildDate><atom:link href="https://kyumin-park.github.io/categories/nlp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transferable Multi-Domain State Generator for Task-Oriented Dialogue Systems</title>
+      <link>https://kyumin-park.github.io/paper/1905.08743/</link>
+      <pubDate>Sun, 10 Jan 2021 23:58:38 +0900</pubDate>
+      
+      <guid>https://kyumin-park.github.io/paper/1905.08743/</guid>
+      <description>Dialogue State Tracking Dialogue State Tracking의 목적은 유저-시스템 사이의 대화로부터 유저의 목적 또는 의도를 정해진 형태 (보통 (slot, value) 형태)로 뽑아내는 것이다. 유저의 의도가 정</description>
+    </item>
+    
+  </channel>
+</rss>
