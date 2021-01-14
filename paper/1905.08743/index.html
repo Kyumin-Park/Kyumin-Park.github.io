@@ -201,7 +201,7 @@ c_{jk} = P_{jk}^{history} \cdot H_{t} \in \mathbb{R}^{d_{hdd}}
 어떤 domain-slot의 경우 대화에서 아직 (또는 계속) 나타나지 않았거나 특정한 값이 아닌 <em>상관없다</em> 라는 값이 들어갈 수도 있다.
 각 domain-slot이 이 경우인지를 판단하기 위해 도입된 것이 이 slot gate이다.
 작동 방식은 (<em>ptr(원래 찾은 value)</em>, <em>don&rsquo;t care</em>, <em>none</em>) 중에서 slot gate의 출력이 가장 높은 쪽을 따르게 하는 것으로,
-예를 들면 slot gate 결과가 (<em>ptr</em>: 0.2, <em>don&rsquo;t care</em>: 0.7, <em>none</em>: 0.1)이 되면 state generator를 통해 구한 value가 아닌 _don&rsquo;t care_를 value로 가지게 된다.</p>
+예를 들면 slot gate 결과가 (<em>ptr</em>: 0.2, <em>don&rsquo;t care</em>: 0.7, <em>none</em>: 0.1)이 되면 state generator를 통해 구한 value가 아닌 <em>don&rsquo;t care</em> 를 value로 가지게 된다.</p>
 <p>Slot Gate는 class 개수가 3개 (<em>ptr(원래 찾은 value)</em>, <em>don&rsquo;t care</em>, <em>none</em>)인 classifier로 정의할 수 있다.
 기존 대화 내용에 해당 domain-slot이 있었는지를 보는 것이기 때문에, dialogue history를 input으로 받아 classify하게 된다.
 따라서, slot gate를 구하는 식은 아래와 같이 나타난다.
